@@ -15,7 +15,7 @@ green='\e[0;32m'
 ipsaya=$(wget -qO- ipinfo.io/ip)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/rizkihdyt6/izinsc/main/ip"
+data_ip="https://raw.githubusercontent.com/Andyyuda/permission/main/ip"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $date_list < $useexp ]]; then
@@ -52,8 +52,8 @@ TIME=$(date +'%Y-%m-%d %H:%M:%S')
 RAMMS=$(free -m | awk 'NR==2 {print $2}')
 KEY="6003347945:AAHv1Ti4HQliYwpYm8sbKrriDkSMqqJLUqE"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-REPO="https://raw.githubusercontent.com/rizkihdyt6/scupdate/rizki/"
-CDNF="https://raw.githubusercontent.com/rizkihdyt6/scupdate/rizki"
+REPO="https://raw.githubusercontent.com/Andyyuda/scvps/"
+CDNF="https://raw.githubusercontent.com/Andyyuda/scvps"
 APT="apt-get -y install "
 domain=$(cat /root/domain)
 start=$(date +%s)
